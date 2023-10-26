@@ -141,7 +141,7 @@ body {
     justify-content: center;
 }
 
-.main-container{
+.main-container {
     margin-bottom: 200px;
 }
 
@@ -195,8 +195,9 @@ body {
     border-radius   : 5px;
     cursor          : pointer;
     transition      : background-color 0.3s;
-    margin: 20px;
-    color: black; /* Ajustado */
+    margin          : 20px;
+    color           : black;
+    /* Ajustado */
 
 }
 
@@ -206,11 +207,11 @@ body {
 
 
 .main .main-container {
-    width          : 100%;
-    display        : flex;
-    flex-direction : column;
-    align-items    : center;
-    justify-content: center;
+    width             : 100%;
+    display           : flex;
+    flex-direction    : column;
+    align-items       : center;
+    justify-content   : center;
     /* padding        : 20px; */
 }
 
@@ -342,21 +343,20 @@ body {
 }
 
 .card-image {
-    width  : 100%;
-    height : auto;
-    /* padding: 10px; */
+    width : 100%;
+    height: auto;
 }
 
 .card.expanded {
-    position           : fixed;
-    top                : 50%;
-    left               : 50%;
-    transform          : translate(-50%, -50%);
-    max-width          : 90%;
-    height             : auto;
-    overflow-y         : auto;
-    z-index            : 101;
-    background-color   : #000000a4;
+    position        : fixed;
+    top             : 50%;
+    left            : 50%;
+    transform       : translate(-50%, -50%);
+    max-width       : 90%;
+    height          : auto;
+    overflow-y      : auto;
+    z-index         : 101;
+    background-color: #000000a4;
 }
 
 .card.expanded .card-info {
@@ -388,7 +388,8 @@ body {
     display         : inline-block;
     padding         : 10px 20px;
     background-color: var(--stroke-color);
-    color: black; /* Ajustado */
+    color           : black;
+    /* Ajustado */
     font-family     : 'Fira Code', monospace;
     font-weight     : 700;
     text-decoration : none;
@@ -438,8 +439,9 @@ body {
     stroke      : #646464;
     stroke-width: 1;
 }
-.none{
-    fill        : none;
+
+.none {
+    fill: none;
 }
 
 .animated-path,
@@ -532,14 +534,14 @@ body {
 
 /* contact form */
 .contact-section {
-    margin-top: 5vw;
+    margin-top    : 5vw;
     display       : flex;
     flex-direction: column;
     align-items   : center;
     padding       : 80px;
 }
 
-.contact-section h2{
+.contact-section h2 {
     font-family   : 'Fira Code', monospace;
     font-weight   : 1000;
     font-size     : 30px;
@@ -553,7 +555,7 @@ body {
 }
 
 .contact-container {
-    margin-bottom: 4vw;
+    margin-bottom   : 4vw;
     background-color: #222;
     padding         : 40px;
     border-radius   : 10px;
@@ -573,7 +575,7 @@ body {
 }
 
 .label {
-    display      : block;
+    display       : block;
     font-family   : 'Fira Code', monospace;
     font-weight   : 1000;
     font-size     : 60px;
@@ -607,7 +609,8 @@ textarea {
     display         : block;
     padding         : 10px 20px;
     background-color: var(--stroke-color);
-    color: black; /* Ajustado */
+    color           : black;
+    /* Ajustado */
     font-family     : 'Fira Code', monospace;
     font-weight     : 700;
     text-decoration : none;
@@ -638,6 +641,11 @@ textarea {
     justify-content: center;
     align-items    : center;
     transition     : 0.5s;
+}
+
+.light {
+    width : 50px;
+    height: 50px;
 }
 
 .theme-container:hover {
@@ -694,12 +702,12 @@ textarea {
     }
 
     .card {
-        flex: 1 1 calc(50% - 40px);
+        flex     : 1 1 calc(50% - 40px);
         max-width: calc(50% - 40px);
     }
 
     .knows {
-        width: 12vw;
+        width : 12vw;
         height: 12vw;
     }
 
@@ -742,18 +750,18 @@ textarea {
     }
 
     .card {
-        flex: 1 1 calc(100% - 40px);
+        flex     : 1 1 calc(100% - 40px);
         max-width: calc(100% - 40px);
     }
 
     .knows {
-        width: 15vw;
+        width : 15vw;
         height: 15vw;
     }
 
     .skills-container {
         grid-template-columns: 1fr;
-        gap: 10px;
+        gap                  : 10px;
     }
 
     .skill-category h3 {
@@ -791,7 +799,7 @@ textarea {
     }
 
     .knows {
-        width: 20vw;
+        width : 20vw;
         height: 20vw;
     }
 
