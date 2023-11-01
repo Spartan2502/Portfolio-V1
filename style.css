@@ -313,7 +313,12 @@ body {
 .svg-container {
     position: relative;
     margin  : 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+
 
 .knows {
     width           : 5.5vw;
@@ -353,6 +358,34 @@ body {
     overflow         : visible;
 
     animation: dash 15s linear infinite;
+}
+
+.lang-name{
+    position: absolute;
+    font-family: 'Fira Code', monospace;
+    font-weight: 700;
+    font-size  : 20px;
+    color      : white;
+
+    bottom: -20%;
+    opacity: 0;
+}
+
+.knows:hover + .lang-name {
+    animation: textAppear 1s forwards;
+}
+
+
+@keyframes textAppear {
+    from {
+        opacity  : 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity  : 1;
+        transform: translateY(0);
+    }
 }
 
 
