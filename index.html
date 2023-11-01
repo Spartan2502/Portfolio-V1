@@ -14,21 +14,8 @@
 </head>
 
 <body>
-    <!-- MAIN SECTION -->
     <main class="main">
-        <!-- <nav class="nav" id="nav">
-            <div class="title">
-            </div>
-            <div class="links">
-                <ul>
-                    <li><a href="#about" class="link">About</a></li>
-                    <li><a href="#projects" class="link">Projects</a></li>
-                    <li><a href="#contact" class="link">Contact</a></li>
-                </ul>
-            </div>
-        </nav> -->
         <i class="fa-solid fa-bars" id="navBtn"></i>
-
         <div class="main-container">
             <div class="info">
                 <div class="hi">
@@ -37,7 +24,7 @@
                 </div>
                 <h1>Alejandro Orbe</h1>
                 <p class="typewrite" data-period="2000"
-                    data-type='[ "Soy apasionado", "Soy autodidacta", "Me apasiona lo que hago", "HOLA" ]'>
+                    data-type='[ "Soy desarrollador backend", "Soy autodidacta", "Me apasiona lo que hago" ]'>
                     <span class="wrap"></span>
                 </p>
                 <a class="CV" href="./Assets/CV/Jose_Alejandro_Orbe_Chavarria.pdf"
@@ -66,7 +53,8 @@
                             </path>
                         </svg>
                     </a>
-                    <a href="https://www.linkedin.com/in/jose-alejandro-orbe-chavarria-6898441a2/" target="_blank" aria-label="Linkedin">
+                    <a href="https://www.linkedin.com/in/jose-alejandro-orbe-chavarria-6898441a2/" target="_blank"
+                        aria-label="Linkedin">
                         <svg style="--stroke-color: #007bb5;" class="svg--icon knows" xmlns="http://www.w3.org/2000/svg"
                             x="0px" y="0px" width="100" height="100" viewBox="-13 3 65 65">
                             <path class="original-path"
@@ -92,62 +80,43 @@
             </div>
         </div>
 
-        <!-- Tarjeta de proyecto -->
         <div class="cards-container">
             <h2>PROYECTOS</h2>
             <div class="card" onclick="expandCard(this)">
                 <img class="card-image" src="./Assets/projects/primerproyecto.webp" alt="Nombre del Proyecto" ">
-                <div class="card-content">
-                    <h3 class="card-title">Título del Proyecto</h3>
-                    <p class="card-description">
-                        Descripción breve del proyecto.
-                    </p>
-                    <a href="https://vinicola-la-estacion.vercel.app/" class="card-btn">Ver Proyecto</a>
-                </div>
-                <!-- La información extendida, inicialmente oculta -->
-                <div class="card-info" style="display: none;">
-                    <p>Lenguajes usados: HTML, CSS, JavaScript</p>
-                    <p>Descripción: Este es un proyecto de ejemplo...</p>
-                </div>
+                <div class=" card-content">
+                <h3 class="card-title">Vinicola La Estacion</h3>
+                <a href="https://vinicola-la-estacion.vercel.app/" class="card-btn">Ver Proyecto</a>
             </div>
-            <div class="card" onclick="expandCard(this)">
-                <img class="card-image" src="./Assets/projects/primerproyecto.webp" alt="Nombre del Proyecto" ">
-                <div class="card-content">
-                    <h3 class="card-title">Título del Proyecto</h3>
-                    <p class="card-description">
-                        Descripción breve del proyecto.
-                    </p>
-                    <a href="enlace-al-proyecto" class="card-btn">Ver Proyecto</a>
-                </div>
-                <!-- La información extendida, inicialmente oculta -->
-                <div class="card-info" style="display: none;">
-                    <p>Lenguajes usados: HTML, CSS, JavaScript</p>
-                    <p>Descripción: Este es un proyecto de ejemplo...</p>
-                </div>
-            </div>
-            <div class="card" onclick="expandCard(this)">
-                <img class="card-image" src="./Assets/projects/primerproyecto.webp" alt="Nombre del Proyecto" ">
-                <div class="card-content">
-                    <h3 class="card-title">Título del Proyecto</h3>
-                    <p class="card-description">
-                        Descripción breve del proyecto.
-                    </p>
-                    <a href="enlace-al-proyecto" class="card-btn">Ver Proyecto</a>
-                </div>
-                <!-- La información extendida, inicialmente oculta -->
-                <div class="card-info" style="display: none;">
-                    <p>Lenguajes usados: HTML, CSS, JavaScript</p>
-                    <p>Descripción: Este es un proyecto de ejemplo...</p>
-                </div>
+            <div class="card-info" style="display: none;">
+                <p>Lenguajes usados: HTML, CSS, JavaScript</p>
+                <p>Descripción: el proyeto se desarrollo usando localstorage para el procesado de la informacion (se
+                    sabe que no es recomendable usarlo) se creo la pagina para la venta de vinos y licores</p>
             </div>
         </div>
 
-        <!-- Contenedor de superposición, inicialmente oculto -->
+        
+        <!-- WIP -->
+        <div class="card">
+            <img class="card-image" src="./Assets/projects/coming-soon.webp" alt="Nombre del Proyecto" ">
+            <div class=" card-content">
+            <h3 class="card-title">Comming Soon</h3>
+            <a href="https://vinicola-la-estacion.vercel.app/" class="card-btn">WIP</a>
+        </div>
+        <div class="card-info" style="display: none;">
+            <p>WIP</p>
+            <p>WIP</p>
+        </div>
+
+
+
+
+        </div>
+        </div>
         <div class="overlay" style="display: none;">
-            <!-- El contenido del contenedor de superposición estará vacío -->
         </div>
-        </section>
 
+        </section>
         <!-- 
 
 
@@ -485,7 +454,7 @@ skills
         </section>
 
         <div class="theme-container shadow-dark" id="theme-container">
-            <img id="theme-icon" src="./Assets/svg/moon.svg" alt="Icono del tema" class="light" >
+            <img id="theme-icon" src="./Assets/svg/moon.svg" alt="Icono del tema" class="light">
         </div>
     </main>
 

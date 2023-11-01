@@ -35,109 +35,6 @@ body {
     position             : relative;
 }
 
-.main .nav {
-    width             : 100%;
-    height            : 100px;
-    display           : flex;
-    align-items       : center;
-    justify-content   : space-around;
-    animation         : fadeInDown;
-    animation-duration: 2s;
-}
-
-.main .nav .title {
-    width          : auto;
-    height         : 100%;
-    display        : flex;
-    align-items    : center;
-    justify-content: center;
-}
-
-.main .nav .title h2 {
-    font-weight: 500;
-    font-size  : 40px;
-    padding    : 0;
-    margin     : 0;
-    color      : var(--font-color);
-}
-
-.main .nav .links {
-    width          : auto;
-    height         : 100%;
-    display        : flex;
-    align-items    : center;
-    justify-content: center;
-}
-
-.main .nav .links ul {
-    width          : auto;
-    height         : 100%;
-    display        : flex;
-    align-items    : center;
-    justify-content: center;
-    gap            : 30px;
-    list-style     : none;
-}
-
-.main .nav .links ul li a {
-    text-decoration: none;
-    color          : var(--link-color);
-    font-weight    : 500;
-    font-size      : 30px;
-}
-
-.main .nav .links ul li a:hover {
-    color: var(--link-hover-color);
-}
-
-.main .nav .btn {
-    width  : auto;
-    height : auto;
-    display: none;
-    cursor : pointer;
-}
-
-.main .nav .btn i {
-    font-size: 40px;
-    color    : var(--font-color);
-}
-
-.main .navMobile {
-    width           : 100%;
-    height          : 100vh;
-    background-color: var(--bs-light);
-    display         : flex;
-    align-items     : center;
-    justify-content : center;
-}
-
-.main .navMobile .title {
-    display: none;
-}
-
-.main .navMobile .btn {
-    position: absolute;
-    right   : 8%;
-    top     : 25px;
-}
-
-.main .navMobile .btn i {
-    font-size: 40px;
-    color    : var(--font-color);
-    cursor   : pointer;
-}
-
-.main .navMobile .links ul {
-    list-style: none;
-}
-
-.main .navMobile .links ul li a {
-    color          : var(--font-color);
-    text-decoration: none;
-    font-size      : 40px;
-    font-weight    : 500;
-}
-
 .main .main-container {
     width          : 100%;
     height         : calc(100vh - 100px);
@@ -414,8 +311,8 @@ body {
 }
 
 .knows {
-    width           : 8vw;
-    height          : 8vw;
+    width           : 5.5vw;
+    height          : 5.5vw;
     overflow        : visible;
     background-color: var(--skills-background-color);
 }
