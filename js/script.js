@@ -1,3 +1,17 @@
+if ('serviceWorker' in navigator) {
+    // console.log('serviceWorker is enabled in navigator');
+    
+    navigator.serviceWorker.register("./sw.js")
+        .then(registration => {
+            // console.log('registered', registration)
+        }).catch(err => {
+            // console.log(err)
+        })
+}
+else {
+    // console.log('serviceWorker is not enabled in navigator');
+}
+
 var TxtType = function (el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
@@ -86,7 +100,7 @@ function setTheme() {
 
 function setLight() {
     var link = document.getElementById("themes");
-    link.href = "lightmode.css";
+    link.href = "./css/lightmode.css";
 
     // root.style.setProperty(
     //     "--bs-dark",
@@ -103,7 +117,7 @@ function setLight() {
 
 function setDark() {
     var link = document.getElementById("themes");
-    link.href = "style.css";
+    link.href = "./css/style.css";
 
     // root.style.setProperty("--bs-dark", "#212529");
     container.classList.remove("shadow-light");

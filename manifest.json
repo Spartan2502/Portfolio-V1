@@ -1,0 +1,30 @@
+{
+    "name": "Alejandro Orbe",
+    "short_name": "ALEXORBE",
+    "description": "Portafolio echo para presentar mis poryectos conocimientos y blog donde compartire mi conocmiento y lo que aprenda en mi camino como desarrollador",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#fff",
+    "theme_color": "#007bff",
+    "icons": [
+        {
+            "src": "./Assets/svg/huskypc.svg",
+            "sizes": "48x48 72x72 96x96 128x128 256x256 512x512",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        },
+        {
+            "src": "icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}

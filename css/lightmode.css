@@ -27,6 +27,11 @@ body {
     font-family     : 'Fira Code', monospace;
 }
 
+.husky {
+    width : 15vw;
+    height: auto;
+}
+
 .main {
     width                : 100%;
     height               : 100vh;
@@ -306,8 +311,11 @@ body {
 }
 
 .svg-container {
-    position: relative;
-    margin  : 1vw;
+    position       : relative;
+    margin         : 1vw;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
 }
 
 .knows {
@@ -346,7 +354,35 @@ body {
     stroke-linecap   : round;
     stroke-linejoin  : round;
     overflow         : visible;
-    animation        : dash 15s linear infinite;
+
+    animation: dash 15s linear infinite;
+}
+
+.lang-name {
+    position   : absolute;
+    font-family: 'Fira Code', monospace;
+    font-weight: 700;
+    font-size  : 20px;
+    color      : black !important;
+
+    bottom : -30%;
+    opacity: 0;
+}
+
+.knows:hover+.lang-name {
+    animation: textAppear 1s forwards;
+}
+
+@keyframes textAppear {
+    from {
+        opacity  : 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity  : 1;
+        transform: translateY(0);
+    }
 }
 
 .skills-section {
@@ -583,6 +619,11 @@ textarea {
 }
 
 @media screen and (max-width: 768px) {
+
+    .husky {
+        width: 20vw;
+    }
+
     .main .nav .btn {
         display: flex;
     }
@@ -636,6 +677,10 @@ textarea {
 }
 
 @media screen and (max-width: 480px) {
+    .husky {
+        width: 30vw;
+    }
+
     .main .nav .title h2 {
         font-size: 20px;
     }
