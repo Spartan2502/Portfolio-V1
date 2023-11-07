@@ -1,6 +1,6 @@
 if ('serviceWorker' in navigator) {
     // console.log('serviceWorker is enabled in navigator');
-    
+
     navigator.serviceWorker.register("./sw.js")
         .then(registration => {
             // console.log('registered', registration)
@@ -11,6 +11,17 @@ if ('serviceWorker' in navigator) {
 else {
     // console.log('serviceWorker is not enabled in navigator');
 }
+
+
+var origTitle = document.title;
+function oldTitle() {
+    document.title = origTitle;
+}
+function newTitle() {
+    document.title = 'No te vallas, vuelve!!';
+}
+window.onblur = newTitle;
+window.onfocus = oldTitle;
 
 var TxtType = function (el, toRotate, period) {
     this.toRotate = toRotate;
