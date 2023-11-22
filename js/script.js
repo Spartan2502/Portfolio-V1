@@ -1,16 +1,13 @@
 if ('serviceWorker' in navigator) {
-    // console.log('serviceWorker is enabled in navigator');
 
     navigator.serviceWorker.register("./sw.js")
         .then(registration => {
-            // console.log('registered', registration)
         }).catch(err => {
-            // console.log(err)
         })
 }
 else {
-    // console.log('serviceWorker is not enabled in navigator');
 }
+
 
 
 var origTitle = document.title;
@@ -65,6 +62,8 @@ TxtType.prototype.tick = function () {
 };
 
 window.onload = function () {
+
+    
     var elements = document.getElementsByClassName('typewrite');
     for (var i = 0; i < elements.length; i++) {
         var toRotate = elements[i].getAttribute('data-type');

@@ -10,7 +10,8 @@ const ArchivosCache = [
     '/Assets/svg/sun.svg',
     '/css/lightmode.css',
     '/css/style.css',
-    '/js/script.js'
+    '/js/script.js',
+    '/js/mail.js'
 ]
 
 self.addEventListener("install", e => {

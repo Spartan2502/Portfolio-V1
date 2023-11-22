@@ -477,26 +477,30 @@ skills
                     </div>
                 </div>
         </section>
+        
         <section class="contact-section">
-            <h2>Contacto</h2>
-            <div class="contact-container">
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Nombre:</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Mensaje:</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Enviar</button>
-                </form>
+            <div id="formover" class="contact-container">
+                <h2>Contacto</h2>
+                <div class="contact-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nombre:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje:</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" id="contactButton" class="submit-btn">Enviar</button>
+                    </form>
+                </div>
             </div>
         </section>
+
 
         <div class="theme-container shadow-dark" id="theme-container">
             <img id="theme-icon" src="./Assets/svg/moon.svg" alt="Icono del tema" class="light">
@@ -504,7 +508,13 @@ skills
     </main>
 
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
+    <script type="text/javascript">
+        emailjs.init('MreuxjkB159bC1jBB')
+    </script>
+
+    <script src="./js/mail.js"></script>
     <script src="./js/script.js"></script>
 
 </body>
