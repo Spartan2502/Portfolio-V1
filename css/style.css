@@ -489,8 +489,6 @@ body {
     box-shadow      : 0 2px 10px rgba(0, 0, 0, 0.1);
     width           : 100%;
     max-width       : 1000px;
-    position        : relative;
-    /* Ensure the overlay is positioned relative to the contact container */
 }
 
 .contact-form {
@@ -518,7 +516,7 @@ body {
     animation     : none;
 }
 
-.input,
+input,
 textarea {
     width           : 100%;
     padding         : 10px;
