@@ -37,6 +37,7 @@
                 <a class="CV" href="./Assets/cv/Jose_Alejandro_Orbe_Chavarria.pdf"
                     download="Jose_Alejandro_Orbe_Chavarria.pdf">DOWNLOAD CV</a>
                 <p>Encuentrame en </p>
+
                 <section class="social-container">
                     <a href="https://discordapp.com/users/381504890050052100" target="_blank" aria-label="DISCORD">
                         <svg style="--stroke-color: #7289da;" class="svg--icon knows" xmlns="http://www.w3.org/2000/svg"
@@ -86,44 +87,64 @@
                     </a>
             </div>
         </div>
+        </section>
 
-        <div class="cards-container">
+        <section class="cards-container">
             <h2>PROYECTOS</h2>
             <div class="card" onclick="expandCard(this)">
-                <img class="card-image" src="./Assets/projects/primerproyecto.webp" alt="Nombre del Proyecto" ">
-                <div class=" card-content">
-                <h3 class="card-title">Vinicola La Estacion</h3>
-                <a href="https://vinicola-la-estacion.vercel.app/" class="card-btn">Ver Proyecto</a>
+                <img class="card-image" src="./Assets/projects/primerproyecto.webp" alt="Nombre del Proyecto">
+                <div class="card-content">
+                    <h3 class="card-title">Vinicola La Estacion</h3>
+                    <a href="https://vinicola-la-estacion.vercel.app/" class="card-btn">Ver Proyecto</a>
+                </div>
+                <div class="card-info" style="display: none;">
+                    <p>Lenguajes usados: HTML, CSS, JavaScript</p>
+                    <p>Descripción: el proyecto se desarrolló usando localstorage para el procesado de la información
+                        (se
+                        sabe que no es recomendable usarlo). Se creó la página para la venta de vinos y licores.</p>
+                </div>
             </div>
-            <div class="card-info" style="display: none;">
-                <p>Lenguajes usados: HTML, CSS, JavaScript</p>
-                <p>Descripción: el proyeto se desarrollo usando localstorage para el procesado de la informacion (se
-                    sabe que no es recomendable usarlo) se creo la pagina para la venta de vinos y licores</p>
+
+            <!-- WIP -->
+            <div class="card">
+                <img class="card-image" src="./Assets/projects/coming-soon.webp" alt="Nombre del Proyecto">
+                <div class="card-content">
+                    <h3 class="card-title">Power House Electronics</h3>
+                    <a href="https://vinicola-la-estacion.vercel.app/" class="card-btn">WIP</a>
+                </div>
+                <div class="card-info" style="display: none;">
+                    <p>WIP</p>
+                    <p>WIP</p>
+                </div>
             </div>
-        </div>
 
+            <div class="card">
+                <img class="card-image" src="./Assets/projects/coming-soon.webp" alt="Nombre del Proyecto">
+                <div class="card-content">
+                    <h3 class="card-title">Coming Soon</h3>
+                    <a href="https://vinicola-la-estacion.vercel.app/" class="card-btn">WIP</a>
+                </div>
+                <div class="card-info" style="display: none;">
+                    <p>WIP</p>
+                    <p>WIP</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <img class="card-image" src="./Assets/projects/coming-soon.webp" alt="Nombre del Proyecto">
+                <div class="card-content">
+                    <h3 class="card-title">Coming Soon</h3>
+                    <a href="https://vinicola-la-estacion.vercel.app/" class="card-btn">WIP</a>
+                </div>
+                <div class="card-info" style="display: none;">
+                    <p>WIP</p>
+                    <p>WIP</p>
+                </div>
+            </div>
 
-        <!-- WIP -->
-        <div class="card">
-            <img class="card-image" src="./Assets/projects/coming-soon.webp" alt="Nombre del Proyecto" ">
-            <div class=" card-content">
-            <h3 class="card-title">Comming Soon</h3>
-            <a href="https://vinicola-la-estacion.vercel.app/" class="card-btn">WIP</a>
-        </div>
-        <div class="card-info" style="display: none;">
-            <p>WIP</p>
-            <p>WIP</p>
-        </div>
-
-
-
-
-        </div>
-        </div>
-        <div class="overlay" style="display: none;">
-        </div>
-
+            <div class="overlay" style="display: none;"></div>
         </section>
+
         <!-- 
 
 
@@ -479,24 +500,24 @@ skills
         </section>
 
         <section class="contact-section">
-                <h2>Contacto</h2>
-                <div class="contact-container">
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Nombre:</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Mensaje:</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                        <button type="submit" id="contactButton" class="submit-btn">Enviar</button>
-                    </form>
-                </div>
+            <h2>Contacto</h2>
+            <div class="contact-container">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" id="contactButton" class="submit-btn">Enviar</button>
+                </form>
+            </div>
             </div>
         </section>
 
