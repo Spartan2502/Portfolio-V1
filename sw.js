@@ -5,6 +5,8 @@ const ArchivosCache = [
     '/Assets/cv/Jose_Alejandro_Orbe_Chavarria.pdf',
     '/Assets/projects/coming-soon.webp',
     '/Assets/projects/primerproyecto.webp',
+    '/Assets/projects/PowerHouse.jpeg',
+    '/Assets/projects/Scribble.png',
     '/Assets/svg/huskypc.svg',
     '/Assets/svg/moon.svg',
     '/Assets/svg/sun.svg',
