@@ -1,4 +1,4 @@
-const NombreCache = 'ALEXORBE'
+const NombreCache = 'ALEXORBE-V1'
 const ArchivosCache = [
     '/',
     '/index.html',
@@ -27,15 +27,24 @@ self.addEventListener("install", e => {
 })
 
 self.addEventListener('activate', e => {
-    // console.log("el service worker activado " + e)
-})
+    e.waitUntil(
+        caches.keys().then(keys => {
+            return Promise.all(keys.map(key => {
+                if (key !== NombreCache) {
+                    return caches.delete(key);
+                }
+            }));
+        })
+    );
+});
+
 
 self.addEventListener('fetch', e => {
     // console.log("fetch " + e)
     e.respondWith(
         caches.match(e.request)
-        .then(response => {
-            return response || fetch(e.request)
-        })
+            .then(response => {
+                return response || fetch(e.request)
+            })
     )
 })

@@ -1,21 +1,18 @@
-if ('serviceWorker' in navigator) {
-
-    navigator.serviceWorker.register("./sw.js")
-        .then(registration => {
-        }).catch(err => {
-        })
-}
-else {
-}
-
-
+navigator.serviceWorker
+    .register("./sw.js")
+    .then((registration) => {
+        console.log("Service Worker registrado con éxito:", registration);
+    })
+    .catch((err) => {
+        console.error("Error al registrar el Service Worker:", err);
+    });
 
 var origTitle = document.title;
 function oldTitle() {
     document.title = origTitle;
 }
 function newTitle() {
-    document.title = 'No te vallas, vuelve!!';
+    document.title = "No te vallas, vuelve!!";
 }
 window.onblur = newTitle;
 window.onfocus = oldTitle;
@@ -25,7 +22,7 @@ var TxtType = function (el, toRotate, period) {
     this.el = el;
     this.loopNum = 0;
     this.period = parseInt(period, 10) || 2000;
-    this.txt = '';
+    this.txt = "";
     this.tick();
     this.isDeleting = false;
 };
@@ -40,17 +37,19 @@ TxtType.prototype.tick = function () {
         this.txt = fullTxt.substring(0, this.txt.length + 1);
     }
 
-    this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+    this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
 
     var that = this;
     var delta = 200 - Math.random() * 100;
 
-    if (this.isDeleting) { delta /= 2; }
+    if (this.isDeleting) {
+        delta /= 2;
+    }
 
     if (!this.isDeleting && this.txt === fullTxt) {
         delta = this.period;
         this.isDeleting = true;
-    } else if (this.isDeleting && this.txt === '') {
+    } else if (this.isDeleting && this.txt === "") {
         this.isDeleting = false;
         this.loopNum++;
         delta = 500;
@@ -62,12 +61,10 @@ TxtType.prototype.tick = function () {
 };
 
 window.onload = function () {
-
-    
-    var elements = document.getElementsByClassName('typewrite');
+    var elements = document.getElementsByClassName("typewrite");
     for (var i = 0; i < elements.length; i++) {
-        var toRotate = elements[i].getAttribute('data-type');
-        var period = elements[i].getAttribute('data-period');
+        var toRotate = elements[i].getAttribute("data-type");
+        var period = elements[i].getAttribute("data-period");
         if (toRotate) {
             new TxtType(elements[i], JSON.parse(toRotate), period);
         }
@@ -78,7 +75,6 @@ window.onload = function () {
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
     document.body.appendChild(css);
 };
-
 
 // codigo boton de dark light theme
 var theme = "dark";
@@ -93,7 +89,6 @@ document.body.style = "background-color: var(--bs-dark);transition: 0.5s;";
 
 container.addEventListener("click", setTheme);
 themeIcon.src = moon;
-
 
 function setTheme() {
     switch (theme) {
@@ -139,50 +134,65 @@ function setDark() {
     themeIcon.src = moon;
 }
 
+document.querySelectorAll(".card").forEach((card) => {
+    card.addEventListener("click", () => {
+        card.classList.toggle("expanded");
+        document.querySelector(".overlay").style.display = card.classList.contains(
+            "expanded"
+        )
+            ? "flex"
+            : "none";
 
-document.querySelectorAll('.card').forEach(card => {
-    card.addEventListener('click', () => {
-        card.classList.toggle('expanded');
-        document.querySelector('.overlay').style.display = card.classList.contains('expanded') ? 'flex' : 'none';
-
-        const cardInfo = card.querySelector('.card-info');
-        cardInfo.style.display = card.classList.contains('expanded') ? 'block' : 'none';
+        const cardInfo = card.querySelector(".card-info");
+        cardInfo.style.display = card.classList.contains("expanded")
+            ? "block"
+            : "none";
     });
 });
 
-
-document.querySelector('.overlay').addEventListener('click', (event) => {
-    if (event.target.classList.contains('overlay') && document.querySelector('.card.expanded')) {
-        const card = document.querySelector('.card.expanded');
-        card.classList.add('contracted');
-        card.classList.remove('expanded');
-        document.querySelector('.overlay').style.display = 'none';
+document.querySelector(".overlay").addEventListener("click", (event) => {
+    if (
+        event.target.classList.contains("overlay") &&
+        document.querySelector(".card.expanded")
+    ) {
+        const card = document.querySelector(".card.expanded");
+        card.classList.add("contracted");
+        card.classList.remove("expanded");
+        document.querySelector(".overlay").style.display = "none";
 
         // Ocultar la información adicional
-        const cardInfo = card.querySelector('.card-info');
-        cardInfo.style.display = 'none';
+        const cardInfo = card.querySelector(".card-info");
+        cardInfo.style.display = "none";
 
         // Eliminar la clase contracted después de que la transición termine
-        card.addEventListener('transitionend', () => {
-            card.classList.remove('contracted');
-        }, { once: true });
+        card.addEventListener(
+            "transitionend",
+            () => {
+                card.classList.remove("contracted");
+            },
+            { once: true }
+        );
     }
 });
 
-document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && document.querySelector('.card.expanded')) {
-        const card = document.querySelector('.card.expanded');
-        card.classList.add('contracted');
-        card.classList.remove('expanded');
-        document.querySelector('.overlay').style.display = 'none';
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && document.querySelector(".card.expanded")) {
+        const card = document.querySelector(".card.expanded");
+        card.classList.add("contracted");
+        card.classList.remove("expanded");
+        document.querySelector(".overlay").style.display = "none";
 
         // Ocultar la información adicional
-        const cardInfo = card.querySelector('.card-info');
-        cardInfo.style.display = 'none';
+        const cardInfo = card.querySelector(".card-info");
+        cardInfo.style.display = "none";
 
         // Eliminar la clase contracted después de que la transición termine
-        card.addEventListener('transitionend', () => {
-            card.classList.remove('contracted');
-        }, { once: true });
+        card.addEventListener(
+            "transitionend",
+            () => {
+                card.classList.remove("contracted");
+            },
+            { once: true }
+        );
     }
 });
