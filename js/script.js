@@ -1,11 +1,11 @@
-navigator.serviceWorker
-    .register("./sw.js")
-    .then((registration) => {
-        console.log("Service Worker registrado con éxito:", registration);
-    })
-    .catch((err) => {
-        console.error("Error al registrar el Service Worker:", err);
-    });
+// navigator.serviceWorker
+//     .register("./sw.js")
+//     .then((registration) => {
+//         console.log("Service Worker registrado con éxito:", registration);
+//     })
+//     .catch((err) => {
+//         console.error("Error al registrar el Service Worker:", err);
+//     });
 
 var origTitle = document.title;
 function oldTitle() {
